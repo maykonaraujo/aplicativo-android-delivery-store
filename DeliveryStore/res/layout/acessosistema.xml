@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AcessoSistema" >
+
+    <Button
+        android:id="@+id/acessoBtCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/acessoLogin"
+        android:layout_alignRight="@+id/acessoBtEntrar"
+        android:layout_below="@+id/acessoBtEntrar"
+        android:layout_marginTop="24dp"
+        android:text="Cadastre-se" />
+
+    <Button
+        android:id="@+id/acessoBtRecSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/acessoBtCadastro"
+        android:layout_alignRight="@+id/acessoBtCadastro"
+        android:layout_below="@+id/acessoBtCadastro"
+        android:layout_marginTop="16dp"
+        android:text="Recuperar senha!" />
+
+    <EditText
+        android:id="@+id/acessoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Login" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/acessoSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acessoLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/acessoBtEntrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/acessoSenha"
+        android:layout_alignRight="@+id/acessoLogin"
+        android:layout_below="@+id/acessoSenha"
+        android:text="Entrar" />
+
+</RelativeLayout>
