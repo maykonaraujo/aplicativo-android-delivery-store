@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CadastroUsuario" >
+
+    <EditText
+        android:id="@+id/cadastroN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cadastroEndereco"
+        android:layout_alignBottom="@+id/cadastroEndereco"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/cadastroEndereco"
+        android:ems="10"
+        android:hint="Nº"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/cadastroBairroinvisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cadastroEndereco"
+        android:layout_alignRight="@+id/cadastroN"
+        android:layout_below="@+id/cadastroEndereco"
+        android:ems="10"
+        android:hint="Bairro"
+        android:inputType="textPersonName"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/cadastroEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cadastroNomeCompleto"
+        android:layout_below="@+id/cadastroNomeCompleto"
+        android:ems="10"
+        android:hint="Endereço" />
+
+    <AutoCompleteTextView
+        android:id="@+id/cadastroAutoCidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/cadastroBairroinvisible"
+        android:layout_below="@+id/cadastroBairroinvisible"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/cadastroTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cadastroAutoCidade"
+        android:layout_below="@+id/cadastroAutoCidade"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/cadastroDDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cadastroTelefone"
+        android:layout_alignBottom="@+id/cadastroTelefone"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/cadastroTelefone"
+        android:ems="10"
+        android:hint="DDD"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/cadastroLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cadastroEmail"
+        android:layout_below="@+id/cadastroEmail"
+        android:layout_toLeftOf="@+id/cadastroSenha"
+        android:ems="10"
+        android:hint="Login" />
+
+    <EditText
+        android:id="@+id/cadastroNomeCompleto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Nome Completo"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/cadastroEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cadastroDDD"
+        android:layout_alignRight="@+id/cadastroTelefone"
+        android:layout_below="@+id/cadastroTelefone"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPostalAddress" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/cadastroSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cadastroLogin"
+        android:layout_toRightOf="@+id/button1"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/cadastroBtCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cadastroTelefone"
+        android:layout_below="@+id/cadastroSenha"
+        android:text="Cadastre-se" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cadastroLogin"
+        android:layout_toRightOf="@+id/cadastroDDD"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Spinner
+        android:id="@+id/cadastroSpinUF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cadastroBairroinvisible"
+        android:layout_alignLeft="@+id/cadastroBairroinvisible"
+        android:layout_below="@+id/cadastroEndereco"
+        android:layout_toLeftOf="@+id/cadastroAutoCidade" />
+
+    <Spinner
+        android:id="@+id/cadastroSpinCidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cadastroAutoCidade"
+        android:layout_alignRight="@+id/cadastroBairroinvisible"
+        android:layout_below="@+id/cadastroN"
+        android:layout_toRightOf="@+id/cadastroSpinUF" />
+
+    <Spinner
+        android:id="@+id/cadastroSpinBairro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cadastroTelefone"
+        android:layout_below="@+id/cadastroBairroinvisible"
+        android:layout_toLeftOf="@+id/cadastroSenha" />
+
+</RelativeLayout>
