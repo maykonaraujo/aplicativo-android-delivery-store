@@ -13,20 +13,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/redefinirEmail"
-        android:layout_alignRight="@+id/acessoBtEntrar"
-        android:layout_below="@+id/acessoBtEntrar"
+        android:layout_alignRight="@+id/redefinirEmail"
+        android:layout_below="@+id/redefinirEmail"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="Cadastre-se" />
+        android:text="Redefinir Senha" />
 
     <Button
-        android:id="@+id/acessoBtRecuperarSenha"
+        android:id="@+id/acessoBtRecSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/recuperarBtRedefinir"
         android:layout_alignRight="@+id/recuperarBtRedefinir"
         android:layout_below="@+id/recuperarBtRedefinir"
         android:layout_marginTop="16dp"
-        android:text="Recuperar senha!" />
+        android:text="Voltar" />
 
     <EditText
         android:id="@+id/redefinirEmail"
@@ -35,29 +36,18 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:hint="Login" >
+        android:hint="Email" >
 
         <requestFocus />
     </EditText>
 
-    <EditText
-        android:id="@+id/acessoSenha"
+    <TextView
+        android:id="@+id/estabelecimentoCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/redefinirEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="Senha"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/acessoBtEntrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/acessoSenha"
-        android:layout_alignRight="@+id/redefinirEmail"
-        android:layout_below="@+id/acessoSenha"
-        android:text="Entrar" />
+        android:layout_alignLeft="@+id/acessoBtRecSenha"
+        android:layout_below="@+id/acessoBtRecSenha"
+        android:layout_marginTop="20dp"
+        android:text="Informe seu email e acesse o link que lhe redirecionará ao local para alterar sua senha." />
 
 </RelativeLayout>

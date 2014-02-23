@@ -8,55 +8,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".CadastroUsuario" >
 
-    <TextView
-        android:id="@+id/menuSejabemVindo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
+    <Spinner
+        android:id="@+id/principalBairro"
+        android:layout_width="154dp"
+        android:layout_height="32dp"
+        android:layout_alignLeft="@+id/principalBtPesq"
+        android:layout_alignRight="@+id/principalBtLogin"
+        android:layout_below="@+id/principalCidade" />
 
-    <TextView
-        android:id="@+id/TextView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/menuSejabemVindo"
-        android:layout_below="@+id/menuSejabemVindo"
-        android:layout_marginTop="22dp"
-        android:text="Cidade:" />
+    <Spinner
+        android:id="@+id/principalUF"
+        android:layout_width="84dp"
+        android:layout_height="34dp"
+        android:layout_alignLeft="@+id/principalBairro"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/principalBtLogin"
+        android:layout_marginTop="22dp" />
 
-    <AutoCompleteTextView
-        android:id="@+id/cadastroAutoCidade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView1"
-        android:layout_alignBottom="@+id/TextView1"
-        android:layout_toRightOf="@+id/TextView1"
-        android:ems="10" 
-        android:completionThreshold="2"/>
+    <Spinner
+        android:id="@+id/principalCidade"
+        android:layout_width="141dp"
+        android:layout_height="34dp"
+        android:layout_alignLeft="@+id/principalBairro"
+        android:layout_alignRight="@+id/principalUF"
+        android:layout_below="@+id/principalUF" />
 
-    <ImageButton
-        android:id="@+id/menuBtPizzaria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/TextView1"
-        android:layout_toRightOf="@+id/cadastroAutoCidade"
-        android:src="@drawable/lupa" />
+    <Spinner
+        android:id="@+id/principalSpinRamo1"
+        android:layout_width="84dp"
+        android:layout_height="37dp"
+        android:layout_alignLeft="@+id/principalBairro"
+        android:layout_alignRight="@+id/principalBairro"
+        android:layout_below="@+id/principalBairro" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/principalBtPesq"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/menuPedido"
-        android:layout_below="@+id/menuPedido"
-        android:text="Pedidos" />
-
-    <ImageButton
-        android:id="@+id/menuPedido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/menuBtPizzaria"
+        android:layout_below="@+id/principalSpinRamo1"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:src="@drawable/pedido" />
+        android:text="Buscar" />
+
+    <Button
+        android:id="@+id/principalBtLogin"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/principalBtPesq"
+        android:layout_below="@+id/principalBtPesq"
+        android:layout_marginTop="15dp"
+        android:text="Login" />
 
 </RelativeLayout>
